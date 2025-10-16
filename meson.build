@@ -9,6 +9,8 @@ incdir_numpy = run_command(py,
 
 inc_np = include_directories(incdir_numpy)
 
+py.install_sources([robustats/robustats.py, robustats/__init__.py])
+
 py.extension_module(
     '_robustats',
     ['c/_robustats.c', 
